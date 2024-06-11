@@ -1,0 +1,30 @@
+.login-form > label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.login-form > label > input {
+  max-width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+button {
+  margin-top: 16px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}

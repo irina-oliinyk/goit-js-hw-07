@@ -1,0 +1,41 @@
+#boxes {
+  display: flex;
+  gap: 44px;
+  justify-content: center;
+}
+
+#controls {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#controls > button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background: #4e75ff;
+  margin-right: 16px;
+}
+
+#controls button:last-child {
+  background: #ff4e4e;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  /* padding: 8px 72px; */
+  width: 150px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-right: 16px;
+}
