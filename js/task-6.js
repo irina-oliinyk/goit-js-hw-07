@@ -3,19 +3,37 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
 // фунцкція для створення елементів
+//  Невірно бо єлементи додаються не за один раз,
+// а по одному, бо додавання виконується у циклі for,
+// а не після нього.
+// function createBoxes(amount) {
+//   const boxesDiv = document.getElementById('boxes');
+
+//   for (let i = 0; i < amount; i++) {
+//     const box = document.createElement('div');
+//     box.style.width = 30 + i * 10 + 'px';
+//     box.style.height = 30 + i * 10 + 'px';
+//     box.style.borderRadius = 50 + 'px';
+//     box.style.backgroundColor = getRandomHexColor();
+//     boxesDiv.appendChild(box);
+//   }
+// }
 
 function createBoxes(amount) {
   const boxesDiv = document.getElementById('boxes');
+  const fragment = document.createDocumentFragment();
 
+  // счетчик
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
-    box.style.width = 30 + i * 10 + 'px';
-    box.style.height = 30 + i * 10 + 'px';
-    box.style.borderRadius = 50 + 'px';
-    box.style.backgroundColor = getRandomHexColor();
-    boxesDiv.appendChild(box);
+    const size = 30 + i * 10;
+    box.style.cssText = `width: ${size}px; height: ${size}px; border-radius: 5px; background-color: ${getRandomHexColor()};`;
+    fragment.appendChild(box);
   }
+
+  boxesDiv.appendChild(fragment);
 }
 
 // очищення
